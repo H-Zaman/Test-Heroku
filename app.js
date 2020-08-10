@@ -6,7 +6,7 @@ const HOST = process.env.HOST ||'localhost'
 
 
 app.get('/', (req, res)=>{
-    res.send('Updated')
+    res.send('Test-Heroku')
 })
 
 // listen
