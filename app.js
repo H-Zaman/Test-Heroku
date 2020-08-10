@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
+const morgan = require('morgan')
 
 const PORT = process.env.PORT || 8080
 const HOST = process.env.HOST ||'localhost'
 
+app.use(morgan('tiny'))
 
 app.get('/:data', (req, res)=>{
     const data = req.params.data
