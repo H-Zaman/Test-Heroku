@@ -8,12 +8,12 @@ const HOST = process.env.HOST ||'localhost'
 app.use(morgan('tiny'))
 
 app.get('/', (req, res)=>{
-    res.send('Home')
+    res.send('/root')
 })
 
 app.get('/:data', (req, res)=>{
     const data = req.params.data
-    res.send(data)
+    res.send('route/'+data)
 })
 
 // listen
