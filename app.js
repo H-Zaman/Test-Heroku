@@ -7,6 +7,10 @@ const HOST = process.env.HOST ||'localhost'
 
 app.use(morgan('tiny'))
 
+app.get('/', (req, res)=>{
+    res.send('Home')
+})
+
 app.get('/:data', (req, res)=>{
     const data = req.params.data
     res.send(data)
