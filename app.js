@@ -5,8 +5,9 @@ const PORT = process.env.PORT || 8080
 const HOST = process.env.HOST ||'localhost'
 
 
-app.get('/', (req, res)=>{
-    res.send('Test-Heroku')
+app.get('/:data', (req, res)=>{
+    const data = req.params.data
+    res.send(data)
 })
 
 // listen
